@@ -5,9 +5,9 @@ services:
     restart: unless-stopped
 
     environment:
-      POSTGRES_DB: intellidocs
-      POSTGRES_USER: intellidocs_user
-      POSTGRES_PASSWORD: intellidocs_password
+      POSTGRES_DB: ${POSTGRES_DB:-intellidocs}
+      POSTGRES_USER: ${POSTGRES_USER:-intellidocs_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-intellidocs_password}
 
     ports:
       - "5433:5432"
